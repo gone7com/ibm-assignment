@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <button onclick="getdt()">get day and time</button>
+    <div id="day"></div>
+    <div id="time"></div>
+    <script type="text/javascript">
+        function getdt() {
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var day = new Date();
+            document.getElementById("day").innerHTML = "Today:" + days[day.getDay()];
+            document.getElementById("day").innerHTML = "Today:" + days[day.getDay()];
+            var hour = day.getHours();
+            var min = day.getMinutes();
+            var sec = day.getSeconds();
+            document.getElementById("time").innerHTML = hour + "PM:" + min + ":" + sec;
+        }
+    </script>
+</body>
+
+</html>

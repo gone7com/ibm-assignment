@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <body>
+        <input type="text" id="str1">
+        <input type="text" id="str2">
+        <br>
+
+        <input type="button" onclick="nonRpt()" value="find">
+
+        <div id="ans"> </div>
+
+        <script type="text/javascript">
+            function nonRpt() {
+                var flag = 0;
+                var ans = ""
+                var mainStr2 = document.getElementById("str2").value;
+                var mainStr1 = document.getElementById("str1").value;
+                var arr1 = mainStr1.split(" ");
+                console.log(arr1);
+                var arr2 = mainStr2.split(" ");
+                var mergedarr = arr1.concat(arr2);
+                console.log(mergedarr)
+                for (var i = 0; i < mergedarr.length; i++) {
+                    for (var j = 0; j < mergedarr.length; j++) {
+                        if (i == j) {
+
+                            continue;
+                        }
+                        if (mergedarr[i] == mergedarr[j]) {
+                            flag++;
+                        }
+                    }
+
+                    if (flag == 0) {
+                        ans += mergedarr[i];
+                        ans += " ";
+                    }
+                    flag = 0;
+                }
+
+                document.getElementById('ans').innerHTML = ans;
+
+            }
+        </script>
+
+    </body>
+
+</html>

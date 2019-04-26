@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <input type="text" id="inStr">
+    <button onclick="checkType(document.getElementById('inStr').value)">checkType</button>
+    <script type="text/javascript">
+        function checkType(val) {
+
+            if (isNaN(val)) {
+                console.log("Stringg")
+            } else {
+                console.log("int")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

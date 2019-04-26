@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <input type="text" id="fullString">
+    <input type="text" id="matchString">
+    <button onclick="findOc()">Find</button>
+    <script type="text/javascript">
+        var count = 0;
+
+        function findOc() {
+            var fullString = document.getElementById("fullString").value;
+            var matchString = document.getElementById("matchString").value;
+
+            while (fullString.indexOf(matchString) != -1) {
+                fullString = fullString.replace(matchString, '');
+                ++count;
+            }
+
+            console.log(count);
+            count = 0;
+
+        }
+    </script>
+</body>
+
+</html>

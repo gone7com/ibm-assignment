@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <input type="text" id="str1">
+    <br>
+    <input type="text" id="str2">
+    <br>
+    <input type="button" onclick="findSub()" value="find">
+    <div id="ans"> </div>
+    <script type="text/javascript">
+        function findSub() {
+            var occ = 0;
+            var mainStr = document.getElementById("str1").value;
+            var occStr = document.getElementById("str2").value;
+            var occSize = occStr.length;
+            for (var i = 0; i < mainStr.length - occSize; i++) {
+
+                if (occStr == mainStr.substring(i, i + occSize))
+                    occ++;
+
+            }
+
+            document.getElementById('ans').innerHTML = occ;
+
+        }
+    </script>
+
+</body>
+
+</html>

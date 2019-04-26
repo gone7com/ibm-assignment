@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <input type="text" id="str1">
+    <br>
+    <input type="button" onclick="nonRpt()" value="find">
+    <div id="ans"> </div>
+    <script type="text/javascript">
+        function nonRpt() {
+            var occ = 0;
+            var ans = "";
+            var mainStr = document.getElementById("str1").value;
+            var splitStr2 = "";
+            var flag = 0;
+            splitStr2 = mainStr.split("");
+
+            for (var j = 0; j < splitStr2.length; j++) {
+                for (var k = 0; k < splitStr2.length; k++) {
+                    if (j == k) {
+                        continue;
+                    }
+                    if (splitStr2[j] == splitStr2[k]) {
+
+                        flag++;
+
+                    }
+                    console.log("for" + splitStr2[j] + "is" + flag)
+                }
+                if (flag == 0) {
+                    ans += splitStr2[j];
+
+                }
+                flag = 0;
+            }
+
+            document.getElementById('ans').innerHTML = ans;
+
+        }
+    </script>
+</body>
+
+</html>

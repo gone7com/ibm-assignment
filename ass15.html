@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <p id="edit">Enter Text Here<b>this </b>is bold</p>
+    <button onclick="hBold(edit)">Submit </button>
+
+    <script type="text/javascript">
+        function hBold() {
+
+            var bold = document.getElementsByTagName('b');
+
+            for (i = 0; i < bold.length; i++) {
+
+                bold[i].style.backgroundColor = 'blue';
+            }
+        }
+
+        function newElement(element, text) {
+            document.getElementById(element).innerHtml = text;
+        }
+    </script>
+
+</body>
+
+</html>

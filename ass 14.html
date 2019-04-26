@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+   </head>
+   <body>
+      <input type="text" id="mainStr">
+      <input type="text" id="secStr">
+      <button onclick="checkStr()">Check String</button>
+      <div id="Ans"></div>
+      <script type="text/javascript">
+         function checkStr(){
+         var mainStr1=document.getElementById("mainStr").value;
+         var secStr1=document.getElementById("secStr").value;
+         var ansStr1=mainStr1.split(" ");
+         if(secStr1==ansStr1[0]){
+         console.log("matched")
+         }else
+         {
+         console.log("no match")
+         }
+         
+         
+         
+         
+         
+         
+         
+         }
+         
+         
+         
+         
+      </script>
+      </button>
+   </body>
+</html>
