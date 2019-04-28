@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<button onclick="optRemove()">click to make text boxes dynamically</button>
+  <select id="mySelect" name="val" size="1" >
+     <option value="A">Apple</option>
+     <option value="B">Cars</option>
+     <option value="C">Honda</option>
+     <option value="D">Fiat</option>
+     <option value="E">Indigo</option>                    
+    </select> 
+<script>
+
+function optRemove(){
+var numb=prompt("Enter value");
+ var selectobject=document.getElementById("mySelect");
+  for (var i=0; i<selectobject.length; i++){
+  if (selectobject.options[i].innerHTML == numb )
+     selectobject.remove(i);
+  }
+
+}
+</script>
+
+
+
+
+</body>
+</html>

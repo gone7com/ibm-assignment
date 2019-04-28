@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button" onclick="checkModificationTime('showMod');">Modification Date</button>
+
+<div id="showMod"></div>
+
+		
+          <script>
+         function checkModificationTime(showMod)	{
+	document.getElementById(showMod).innerHTML = document.lastModified;
+        }
+         </script>
+
+	</body>
+</html>

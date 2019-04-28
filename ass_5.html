@@ -1,0 +1,36 @@
+<html>
+<body>
+
+<select id="dropd">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+  
+<button onClick="disableDrop()" id="myBt">Disable dropdown</button>
+
+<script>
+var flag="true";
+function disableDrop(){
+
+
+if(flag=="true"){
+document.getElementById("dropd").disabled=true;
+console.log("run");
+document.getElementById("myBt").innerHTML="Enable Dropdown";
+flag="false";
+}
+else{
+document.getElementById("dropd").disabled=false;
+document.getElementById("myBt").innerHTML="Disable Dropdown";
+flag="true";
+
+}
+
+}
+
+
+</script>
+</body>
+</html>

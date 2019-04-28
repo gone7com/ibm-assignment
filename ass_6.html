@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<button onclick="makeText()">click to make text boxes dynamically</button>
+<div id="target"></div>
+<script>
+
+function makeText(){
+var numb=prompt("Enter value");
+var newnum=parseInt(numb);
+var container=document.getElementById("target");
+for(var i=0;i<=newnum;i++){
+ var newtext = document.createElement('input');
+        newtext.type = 'text';
+newtext.value="textBox"+i;
+        newtext.id = 'textBox_' + i; // Set id based on "i" value
+        container.appendChild(newtext)
+}
+
+}
+</script>
+
+
+
+
+</body>
+</html>
