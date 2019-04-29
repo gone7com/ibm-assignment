@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <input type="text" id="inp">
+    <button id="check" onclick="checkMethod()">Find </button>
+
+    <script type="text/javascript">
+        function checkMethod() {
+
+            var getin = document.getElementById("inp").value;
+            if (isNaN(getin)) {
+                console.log(" string")
+            } else {
+                console.log("is not a string")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

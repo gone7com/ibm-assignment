@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <input type="text" id="str">
+    <input type="text" id="index">
+    <button onclick="check()">check</button>
+    <script type="texta/javascript">
+        function check() {
+
+            var inp = document.getElementById("str").value;
+            var index = document.getElementById("index").value;
+            var new2 = inp.substring(index - 1, index);
+            if (new2 == new2.toUpperCase() && new2 != " ") {
+
+                console.log(new2)
+                console.log("up")
+            } else
+                console.log("false")
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <input type="text" name="" id="str">
+    <input type="button" name="" onclick="longLetter()" value="Split">
+    <script type="text/javascript">
+        var ans;
+        var flag = 0;
+
+        function longLetter() {
+
+            var word = document.getElementById("str").value;
+            var first = word.split(" ");
+            for (var i = 0; i < first.length; i++) {
+
+                var flag2 = first[i].length;
+                if (flag2 > flag) {
+                    flag = flag2;
+                    ans = i;
+                }
+
+            }
+            console.log(first[ans]);
+        }
+    </script>
+</body>
+
+</html>

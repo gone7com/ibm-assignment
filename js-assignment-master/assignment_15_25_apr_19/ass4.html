@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" id="str">
+	<input type="button" name="" onclick="firstLetter()" value="Split">
+<script type="text/javascript">
+
+	function firstLetter(){
+
+		var word=document.getElementById("str").value;
+		var first=word.substring(0,1);
+		var all=word.substring(1,word.length);
+		var capfirst=first.toUpperCase();
+		console.log(capfirst+all)
+	}
+	</script>
+</body>
+</html>
