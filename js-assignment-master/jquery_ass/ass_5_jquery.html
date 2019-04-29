@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<style type="text/css">
+  .cssClass{
+background-color:yellow;
+height:100px;
+
+  }
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+
+  <body>
+    <button type="button" name="button" id="removeCss">Click to remove css</button>
+    <div class="cssClass">
+This is a div!!
+    </div>
+
+<script type="text/javascript">
+  $("#removeCss").click(function(){
+$(".cssClass").removeClass();
+});
+</script>
+  </body>
+</html>

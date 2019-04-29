@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Toggle Image</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<style type="text/css">
+			#moveIt	{
+				transition: 1s all ease;
+			}
+		</style>
+	</head>
+	<body class="bg-dark">
+		<div class="container-fluid bg-light mx-auto" style="width: 35%; border-radius: 10px;">
+			<img class="img img-fluid" id="moveIt" src="ball.png" alt="No Image!" style="transition: 3s all ease;">
+			<button class="btn btn-success" onclick="imageMove('moveIt');" style="width: 100%; padding-top: 15px; padding-bottom: 15px;">Do IT</button>
+		</div>
+		<script type="text/javascript">
+			show = true;
+			width_1 = document.getElementById('moveIt').width + "px";
+			function imageMove(moveIt)	{
+	if(show == true)	{
+		document.getElementById(moveIt).style.height = '0px';
+		show = false;
+	}
+	else {
+		document.getElementById(moveIt).style.height = width_1;
+		show = true;
+	}
+}
+		</script>
+	</body>
+</html>

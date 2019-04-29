@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+<div id="firstDiv" style="width:100px;">
+  <img src="gauntlet.jpg" style="height:100px;width:100px;" id="img1">
+
+</div>
+<img src="maxresdefault.jpg" id="avng">
+<script type="text/javascript">
+
+$("document").ready(function(){
+
+  $("#firstDiv").css("background-color","yellow");
+
+})
+var flag=true;
+$("#firstDiv").click(function(){
+
+if(flag==true){
+$("#avng").hide(2000);
+$("#img1").attr("src","irongauntlet.jpg");
+flag=false;
+
+}
+else{
+  $("#img1").attr("src","gauntlet.jpg");
+  $("#avng").show(2000);
+  flag=true;
+}
+
+})
+
+
+</script>
+
+
+
+
+  </body>
+</html>

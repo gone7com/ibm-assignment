@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<button type="button" name="button" id="changeSelect">Remove all option and choose new One!!</button>
+    <select class="" name="cars" id="car1">
+      <option value="">Audi</option>
+      <option value="">BMW</option>
+      <option value="">Mercedes</option>
+    </select>
+
+    <script type="text/javascript">
+$("#changeSelect").click(function(){
+$("#car1").empty();
+$("#car1")[0].innerHTML="<option selected>Lamborghni</option>";
+
+
+
+
+});
+
+
+    </script>
+  </body>
+</html>
