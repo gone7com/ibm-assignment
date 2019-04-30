@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style media="screen">
+#box1{
+background-color:blue;
+height:250px;
+width:250px;
+display:inline-block;
+
+}
+
+#box2{
+  background-color:yellow;
+height:250px;
+width:250px;
+display:inline-block;
+
+}
+
+</style>
+
+  </head>
+
+  <body>
+    <div id="box1">
+
+    </div>
+    <div id="box2">
+
+    </div>
+    <br>
+    <button type="button" name="button" id="bt1">Show Animation</button>
+  </body>
+<script type="text/javascript">
+
+$("#bt1").click(function(){
+$("#box1").animate({width: '0px';transform:rotateX('360deg');}, 'slow');
+
+
+
+
+});
+
+</script>
+
+
+</html>

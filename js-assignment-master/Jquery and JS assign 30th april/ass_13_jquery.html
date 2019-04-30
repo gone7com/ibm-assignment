@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head > <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="checkbox" id="ip1" name="car" value="Audi">Audi
+<input type="checkbox" id="ip2" name="car" value="BMW">BMW
+
+<script type="text/javascript">
+  $("input[name='car[]']").click(()=>{
+
+    alert(this.value);
+  })
+
+</script>
+
+  </body>
+</html>

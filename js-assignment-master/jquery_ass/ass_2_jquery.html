@@ -14,21 +14,29 @@
       This not here
     </div>
     <script type="text/javascript">
-    $("#bt1").click(
-      function() {
-        var count=0;
-        console.log("here")
-        while($("div").length!=count){
-          var name = $('div')[count].innerText.split(" ")[1];
-          console.log(name[1]);
-console.log("ok");
+//     $("#bt1").click(
+//       function() {
+//         var count=0;
+//         while($("div").length!=count){
+//           var name = $('div')[count].innerText.split(" ")[1];
+//       $("div")[count].innerHTML=  $("div")[count].innerHTML.replace(name,"<b>"+name+"</b>");
+// count++;
+// }
+// }
 
-      $("div")[count].innerHTML=  $("div")[count].innerHTML.replace(name,"<b>"+name+"</b>");
-console.log($("div")[count].innerText[1]);
-count++;
-}
-}
-    );
+$("#bt1").click(function (){
+var count=0;
+$.each($('div'),function(index,value){
+
+  $("div")[index].innerHTML=$('div')[index].innerHTML.replace($('div')[index].innerText.split(" ")[1],"<b>"+$('div')[index].innerText.split(" ")[1]+"</b>");
+
+});
+
+
+});
+
+// });
+
     </script>
   </body>
 </html>

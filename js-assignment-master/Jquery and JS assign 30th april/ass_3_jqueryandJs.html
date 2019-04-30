@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="div1" style="background-color:blue">
+      This is a div 1
+    </div>
+<br>
+    <div class="div2" style="background-color:yellow">
+      This is a div 2
+    </div>
+    <br>
+<button type="button" name="button" id="bt1">change</button>
+    <script type="text/javascript">
+$("#bt1").click(()=>{
+div1Value=$(".div1").text();
+div2Value=$(".div2").text();
+$(".div1").text(div2Value);
+$(".div2").text(div1Value);
+
+
+
+})
+
+    </script>
+  </body>
+</html>

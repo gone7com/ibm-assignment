@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <table style="width:100%" class="tb">
+     <tr>
+       <th>Firstname</th>
+       <th>Lastname</th>
+       <th>Age</th>
+     </tr>
+     <tr class="col">
+       <td>Jill</td>
+       <td>Smith</td>
+       <td>50</td>
+     </tr>
+     <tr class="col">
+       <td>Eve</td>
+       <td>Jackson</td>
+       <td>94</td>
+     </tr>
+   </table>
+   <br>
+   <div id="div1"></div>
+  <script type="text/javascript">
+
+    $("tr").each(
+      (index, element)=>  {
+        if($("tr")[index].firstElementChild.tagName == "TH");
+        else  console.log($("tr")[index].firstElementChild.innerHTML);
+      }
+    );
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4/jquery.min.js"></script>
+
+  <body>
+    <table id="tb1" >
+    <tr>
+    <th>Name</th>
+  <th>Age</th>
+    </tr>
+    <tr id="row2">
+
+      <td>Dherraj</td>
+<td>21</td>
+    </tr>
+
+
+
+    </table>
+    <br>
+    Name:<input type="text" name="" id="nameIP">
+    <br>
+      Age:<input type="text" name="" id="ageIP">
+<br>
+<button type="" name="button" id="bt1">Add Row</button>
+<script type="text/javascript">
+$("#bt1").click(function(){
+  console.log($("#nameIP").val())
+$("#tb1").append("<tr>"+"<td>"+$("#nameIP").val()+"</td>"+"<td>"+$("#ageIP").val()+"</td>"+"</tr>")
+
+
+})
+</script>
+
+  </body>
+</html>

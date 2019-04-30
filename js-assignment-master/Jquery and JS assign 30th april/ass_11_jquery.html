@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <body>
+    <table id="tb1" >
+    <tr>
+    <th>Name</th>
+  <th>Age</th>
+    </tr>
+    <tr >
+
+      <td>Dherraj</td>
+<td>21</td>
+
+    </tr>
+    <tr>
+
+      <td>Dj</td>
+    <td>21</td>
+
+    </tr>
+
+
+    </table>
+    <br>
+<br>
+<button type="" name="button" id="bt1">Delete Row</button>
+<script type="text/javascript">
+$("#bt1").click(function(){
+  count=$("tr ").length;
+  console.log(count);
+  if(count==1){
+
+}
+else {
+  $("tr")[count-1].remove();
+  count--;
+}
+
+  // if($("tr ").length==0 && $("tr ")[].firstElementChild.tagName == "TH"){
+    // $("tr")[0].remove();
+  // }else {
+    // $("tr")[length].remove();
+  // }
+});
+</script>
+
+  </body>
+</html>
