@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head > <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title>Alert the selected Checkbox</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<select >
+			<option >AUDI</option>
+			<option >BMW</option>
+			<option >MERCEDES</option>
 
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <input type="checkbox" id="ip1" name="car" value="Audi">Audi
-<input type="checkbox" id="ip2" name="car" value="BMW">BMW
-
-<script type="text/javascript">
-  $("input[name='car[]']").click(()=>{
-
-    alert(this.value);
-  })
-
-</script>
-
-  </body>
+		</select>
+		<script type="text/javascript">
+			$("select option").click(
+				()=>	{
+					alert("Selected: " + $("select option:selected")[0].value);
+				}
+			);
+		</script>
+	</body>
 </html>
