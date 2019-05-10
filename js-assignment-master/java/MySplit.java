@@ -2,7 +2,7 @@
 class MySplit{
 public static void main(String[] args) {
 MySplit ms= new MySplit();
- ms.MySplitVersion("Dheeraj,Joshi",',');
+ ms.MySplitVersion("Dheeraj,Joshi,son",',');
 // for (String newst :strnew ) {
   // System.out.println(newst);
 }
@@ -20,29 +20,35 @@ for(int i =0;i<str.length()-1;i++){
   len++;
   }
 }
+len+=1;
 int[] loc= new int[len];
+System.out.println(loc.length);
 for(int i =0;i<str.length()-1;i++){
-
-if(str.charAt(i)==delimitor){
-  loc[count]=str.indexOf(delimitor);
+Character a= new Character(str.charAt(i));
+if(a.equals(delimitor)){
+  System.out.println(delimitor);
+  loc[count]=i;
 count++;
 }
 
 }
-
+loc[count]=str.length();
+System.out.println(loc[0]+" "+loc[1]+" "+count);
 for(int j=0;j<loc.length;j++){
   if(loc[j]==0){
     continue;
   }
 newstr[j]=str.substring(newloc,loc[j]);
 
-newloc=loc[j];
+newloc=loc[j]+1;
 }
+System.out.println("Answer after  split is:");
+for(int l=0;l<newstr.length-1;l++){
 
-for(int l=0;l<newstr.length;l++){
-if(newstr[l].equals("null")){
+if(newstr[l]==null){
 continue;
 }
+
 else
   System.out.println(newstr[l]);
 }

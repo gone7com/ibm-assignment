@@ -1,61 +1,43 @@
 import java.util.Scanner;
-class SecondMost{
+import java.util.Arrays;
 
-public static void main(String[] args) {
-Scanner scan = new Scanner(System.in);
-String str= scan.nextLine();
-int first=0;
-int second=0;
-int[] count=new int[str.length()];
-int count1=0;
-boolean flag=false;
-for (int i =0;i<str.length()-1;i++ ) {
-  for(int j=0;j<str.length();j++){
-  if(str.charAt(i)==str.charAt(j)){
-    count1++;
-  }
-}
-count[i]=count1;
-count1=0;
-}
-for(int k=0;k<count.length-2;k++){
-for(int l=0;l<count.length-1;l++){
-  if(k==l)
-  continue;
-if(count[k]>count[l]){
-  first=k;
-  second=k+1;
-}
-else if(count[k]<count[l]){
-  first=k+1;
-  second=k;
-}
+class SecondMost	{
+	public static void main(String... args)	{
+		System.out.print("Enter string to find second frequent character: ");
+		String checkInThis = new Scanner(System.in).nextLine();
 
+		char[] charArray = checkInThis.toCharArray();
+		Arrays.sort(charArray);
 
-}
-}
-System.out.println(str.charAt(second));
-//     if(i==j)
-//     continue;
-//
-// if(str.charAt(i)==str.charAt(j)){
-// if(i==1){
-// count1++;
-// }
-// else{
-// count2++;
-//
-//
-// }
-// if(count2>count1)
-// int count3=0;
-// count3=count1;
-// count1=count2;
-// count2=count3;
-// }
+		char mostFreqChar=' ', secondMostFreqChar=' ', curChar=' ';
+		int mostFreqCharCount=0, secondMostFreqCharCount=0, curCharCount=0;
 
+		curChar = charArray[0];
 
+		for(int i=0; i<charArray.length; ++i)	{
+			if(curChar == (charArray[i]))	{
+				++curCharCount;
+				// System.out.println("Same char encountered!");
+			}
+			else	{
+				// System.out.println("Different character encountered!");
 
-  }
+				if(curCharCount > mostFreqCharCount)	{
+					secondMostFreqCharCount = mostFreqCharCount;
+					mostFreqCharCount = curCharCount;
+
+					secondMostFreqChar = mostFreqChar;
+					mostFreqChar = curChar;
+
+					// System.out.println("New most occured character found!");
+				}
+				curChar = charArray[i];
+				curCharCount = 0;
+			}
+			// System.out.println("mfc: " + mostFreqChar + " smfc: " + secondMostFreqChar + " cc: " + curChar);
+		}
+
+		System.out.println("Second Frequent character: '" + secondMostFreqChar + "' occured: " + secondMostFreqCharCount + " times");
+	}
 
 }
