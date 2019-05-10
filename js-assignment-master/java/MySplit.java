@@ -2,7 +2,7 @@
 class MySplit{
 public static void main(String[] args) {
 MySplit ms= new MySplit();
- ms.MySplitVersion("Dheeraj,Joshi,joshi",',');
+ ms.MySplitVersion("Dheeraj,Joshi",',');
 // for (String newst :strnew ) {
   // System.out.println(newst);
 }
