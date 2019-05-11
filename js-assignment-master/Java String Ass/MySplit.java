@@ -2,7 +2,7 @@
 class MySplit{
 public static void main(String[] args) {
 MySplit ms= new MySplit();
- ms.MySplitVersion("Dheeraj,Joshi,son",',');
+ ms.MySplitVersion("Dheeraj,Joshi,son,is,here,now",',');
 // for (String newst :strnew ) {
   // System.out.println(newst);
 }
@@ -33,7 +33,7 @@ count++;
 
 }
 loc[count]=str.length();
-System.out.println(loc[0]+" "+loc[1]+" "+count);
+// System.out.println(loc[0]+" "+loc[1]+" "+count);
 for(int j=0;j<loc.length;j++){
   if(loc[j]==0){
     continue;
