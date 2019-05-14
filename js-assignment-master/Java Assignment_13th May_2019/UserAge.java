@@ -14,18 +14,17 @@ Scanner scan= new Scanner(System.in);
 System.out.println("Enter Age:");
 int first= scan.nextInt();
 UserAge ug= new UserAge();
+try{
 ug.Check(first);
-
 }
-public void Check(int age){
-
-  try{
+catch(Exception e){
+  System.out.println(e.getMessage());
+}
+}
+public void Check(int age) throws MyException{
   if(age<15){
   throw new MyException("Enter age grater than 15");
-  }
-  }
-  catch (MyException e) {
-    System.out.println(e.getMessage());
+
   }
   }
 

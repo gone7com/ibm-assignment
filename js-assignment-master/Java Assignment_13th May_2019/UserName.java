@@ -16,24 +16,27 @@ String first= scan.nextLine();
 System.out.println("Last Name:");
 String last= scan.nextLine();
 UserName un= new UserName();
+try{
 un.Check(first,last);
 }
+catch(Exception e){
+System.out.println(e.getMessage());
+}
+}
 
-public void Check(String fn,String ln){
 
-try{
+
+public void Check(String fn,String ln)throws MyException{
+
+
 if(fn.equals(""))
 throw new MyException("First Name not Entered");
-}
-catch (MyException e) {
-  System.out.println(e.getMessage());
-}
-try{
+
+
+
 if(ln.equals(""))
 throw new MyException("Last Name not Entered");
 }
-catch (MyException e) {
-  System.out.println(e.getMessage());
-}
-}
+
+
 }
