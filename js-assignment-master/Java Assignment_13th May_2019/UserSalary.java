@@ -33,7 +33,7 @@ catch(Exception e){
 
 }
 
-public void Check(int sal){
+public void Check(int sal) throws MyException{
 
 if(sal<3000)
 throw new MyException("Salary is less then 3000");
