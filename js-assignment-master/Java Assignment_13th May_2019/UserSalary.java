@@ -16,17 +16,26 @@ System.out.println("First Name:");
 int first= scan.nextInt();
 
 UserSalary un= new UserSalary();
+try{
 un.Check(first);
+}
+catch(Exception e){
+  System.out.println(e.getMessage());
+}
+
+
+
+
+
+
+
+
+
 }
 
 public void Check(int sal){
 
-try{
 if(sal<3000)
 throw new MyException("Salary is less then 3000");
-}
-catch (MyException e) {
-  System.out.println(e.getMessage());
-}
 }
 }
