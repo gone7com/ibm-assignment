@@ -23,14 +23,6 @@ catch(Exception e){
   System.out.println(e.getMessage());
 }
 
-
-
-
-
-
-
-
-
 }
 
 public void Check(int sal) throws MyException{
