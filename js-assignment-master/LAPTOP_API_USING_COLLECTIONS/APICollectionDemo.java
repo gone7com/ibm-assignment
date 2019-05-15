@@ -74,8 +74,6 @@ error=true;
      if(choice==1){
      System.out.println("Enter Laptop id,ram,disk and Name");
      ap.addNew(list,ap);
-     System.out.println(new Laptop(7,12,232,"sdsd").getid());
-     // ap.Selection(list);
      }
      else if(choice==2){
      ap.ShowAll(list);
