@@ -14,11 +14,11 @@ try{
 			while ((inputData= fis.read()) != -1) {
 		             // System.out.println((char) inputData);
 
+					 fos.write(inputData);
+				 	fos.flush();
 
 			count++;
 			if(count==10){
-				fos.write(inputData);
-				fos.flush();
 				// System.out.println(inputData);
 				System.out.println("10 char copied");
 
