@@ -40,6 +40,7 @@ public class Employee {
 		this.insuranceScheme = insuranceScheme;
 	}
 	
+	@Override
 	public int hashCode() {
 		return this.id;
 	}

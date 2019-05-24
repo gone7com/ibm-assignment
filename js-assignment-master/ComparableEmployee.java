@@ -72,6 +72,7 @@ class Employee{
 	}
 
 
+	@Override
 	public String toString(){
 		return this.Name+" "+this.Age+" "+this.Id+" "+this.Address;
 	}
@@ -82,11 +83,13 @@ class Employee{
 }
 
 class shortbyFirstName implements Comparator<Employee>{
+	@Override
 	public int compare(Employee a,Employee b){
 		return a.Name.split(" ")[0].compareToIgnoreCase(b.Name.split(" ")[0]);
 	}
 }
 class shortbyLastName implements Comparator<Employee>{
+	@Override
 	public int compare(Employee a,Employee b){
 String[] arr=a.Name.split(" ");
 String[] arr2=b.Name.split(" ");
@@ -99,6 +102,7 @@ String[] arr2=b.Name.split(" ");
 	}
 }
 class shortbyId implements Comparator<Employee>{
+	@Override
 	public int compare(Employee a,Employee b){
 		return a.Id-b.Id;
 	}

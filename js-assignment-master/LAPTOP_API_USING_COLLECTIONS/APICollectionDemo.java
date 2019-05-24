@@ -27,7 +27,8 @@ class Laptop{
         return this.brand;
     }
 
-     public String toString(){
+     @Override
+	public String toString(){
        return "ID is:"+this.id+" "+"Ram is :"+this.ramSize+" "+" HardDisk is:"+this.hddSize+" "+"Brand is:"+this.brand;
      }
 

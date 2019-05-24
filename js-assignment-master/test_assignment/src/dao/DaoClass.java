@@ -1,7 +1,6 @@
 package dao;
 import java.util.HashMap;
 import java.util.Map;
-import com.ibm.eis.bean.Employee;
 
 public class DaoClass implements DaoInterface{
 
@@ -15,12 +14,14 @@ public class DaoClass implements DaoInterface{
 	}
 	
 	
+	@Override
 	public Map<Integer,Employee>displayEmployee(){
 		return employees;
 		
 		
 	
 	}
+	@Override
 	public boolean checkId(int id) {
 		boolean bl=employees.containsKey(id);
 		

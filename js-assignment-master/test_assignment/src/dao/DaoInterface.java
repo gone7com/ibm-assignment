@@ -3,8 +3,6 @@ package dao;
 
 import java.util.Map;
 
-import com.ibm.eis.bean.Employee;
-
 
 	public interface DaoInterface {
 		

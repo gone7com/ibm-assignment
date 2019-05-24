@@ -2,9 +2,6 @@ package com.ibm.eis.service;
 
 import java.util.Map;
 
-import com.ibm.eis.bean.Employee;
-import dao.DaoClass;
-
 public class ServiceClass implements EmployeeService {
 	DaoClass dao = new DaoClass();
 	@Override
@@ -12,6 +9,7 @@ public void storeIntoMap(int id,Employee employee){
 		dao.storeIntoMap(id,employee);
 		
 	}
+	@Override
 	public void getScheme(int scheme,String scheme2) {
 		if(scheme>5000&&scheme<20000 && scheme2.equals("System Associate")){
 			System.out.println("SCheme C");

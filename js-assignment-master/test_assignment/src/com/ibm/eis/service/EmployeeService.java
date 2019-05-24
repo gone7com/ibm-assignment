@@ -2,8 +2,6 @@ package com.ibm.eis.service;
 
 import java.util.Map;
 
-import com.ibm.eis.bean.Employee;
-
 public interface EmployeeService {
 
 	void storeIntoMap(int id,Employee person);

@@ -1,9 +1,5 @@
 package com.ibm.eis.ui;
 	import java.util.Scanner;
-// import java.util.HashMap;
-	import com.ibm.eis.bean.Employee;
-	import com.ibm.eis.service.EmployeeService;
-	import com.ibm.eis.service.ServiceClass;
 
 	public class Main {
 		
