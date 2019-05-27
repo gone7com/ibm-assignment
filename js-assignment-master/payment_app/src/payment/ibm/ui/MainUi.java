@@ -49,7 +49,7 @@ public class MainUi {
 										}
 										System.out.println("Enter address of user");
 										scan.nextLine();
-										String address=scan.nextLine();
+								String address=scan.nextLine();
 										
 										service.createAcount(nameofuser,phoneno,address);
 			
@@ -228,9 +228,11 @@ public class MainUi {
 	}
 	
 	public boolean validateusername(String name) {
-		Pattern pattern = Pattern.compile("[A-Za-z]+");
+		Pattern pattern = Pattern.compile("[A-Z a-z]+");
 		if(pattern.matcher(name).matches()) {
-			return true;
+			if(name.length()>2) {
+				return true;
+			}
 		}
 		
 		return false;
@@ -240,9 +242,11 @@ public class MainUi {
 	{
 		Pattern pattern = Pattern.compile("[0-9]+");
 		if(pattern.matcher(phoneno).matches()) {
-			return true;
-		}
+			if(phoneno.length()>9) {
+				return true;
+			}
 		
+		}
 		return false;
 
 	}
