@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<bean class="com.ibm.mra.beans.Account" id="AccountUser1">
+		<constructor-arg value="Prepaid" />
+		<constructor-arg value="Dheeraj" />
+
+		<constructor-arg value="100.0" />
+
+
+	</bean>
+	
+	
+	<bean class="com.ibm.mra.beans.Account" id="AccountUser2">
+		<constructor-arg value="Prepaid" />
+		<constructor-arg value="gourav" />
+
+		<constructor-arg value="700.0" />
+
+
+	</bean>
+
+	<bean class="com.ibm.mra.service.AccountServiceImpl" id="Service">
+		<property name="dao" ref="dao" />
+	</bean>
+
+	<bean class="com.ibm.mra.dao.AccountDaoImpl" id="dao">
+		<property name="accountEntry">
+			<map>
+				<entry key="9758224549">
+					<ref bean="AccountUser1" />
+				</entry>
+<entry key="6395857470">
+					<ref bean="AccountUser2" />
+				</entry>
+			</map>
+		</property>
+
+	</bean>
+
+
+	<bean class="com.ibm.mra.ui.MainUi" id="MainUi">
+	</bean>
+
+</beans>
